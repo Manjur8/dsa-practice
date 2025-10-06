@@ -1,5 +1,7 @@
 export function editDistance(text1, text2) {
     // DP - TopDown/Memoization
+    // T - O(n*m)
+    // S - O(n*m)
     const n=text1.length;
     const m=text2.length;
 
