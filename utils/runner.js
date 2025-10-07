@@ -30,7 +30,10 @@ async function run() {
   }
 
   // Convert extra args (if any)
-  const args = rest.map(arg => (isNaN(arg) ? arg : Number(arg)));
+  const args = rest.map(arg => {
+    if (arg === "") return "";
+    return (isNaN(arg) ? arg : Number(arg))
+  });
 
   console.log("🧩 Input:", args.length ? args : "(no args)");
 
