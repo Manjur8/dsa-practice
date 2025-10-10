@@ -31,8 +31,13 @@ async function run() {
 
   // Convert extra args (if any)
   const args = rest.map(arg => {
-    if (arg === "") return "";
-    return (isNaN(arg) ? arg : Number(arg))
+  try {
+      // Try to parse JSON arrays or objects
+      return JSON.parse(arg);
+    } catch {
+      // Fallback: convert numeric strings to numbers
+      return isNaN(arg) ? arg : Number(arg);
+    }
   });
 
   console.log("🧩 Input:", args.length ? args : "(no args)");
