@@ -1,5 +1,5 @@
 export function longestIncreasingSubsequence(nums) {
-    // Recursion
+    // Top Down / Memoization
     // T => O(n^2)
     // S => O(n^2)
     let n = nums.length;
