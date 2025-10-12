@@ -48,3 +48,6 @@ async function run() {
 }
 
 run();
+
+// Example to run:
+// node utils/runner.js dp lis "[10,9,2,5,3,7,101,18]"
